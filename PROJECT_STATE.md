@@ -60,10 +60,11 @@ Claude and OpenAI are not part of this project.
 - Added `.env.example` and project run instructions.
 - Confirmed lint and production build checks pass.
 - Verified the production shell, mobile navigation, OLED theme selection, and screen transitions in a browser.
+- Pushed the initial project setup to `https://github.com/Hny-Patel/AI-teleprompter.git` on `main`.
 
 ## Current Step
 
-Initial application foundation and responsive studio shell are in place. The teleprompter, editor, camera, AI, sync, and other product features are not implemented yet.
+Initial application foundation and responsive studio shell are in place and pushed to the GitHub `main` branch. The teleprompter, editor, camera, AI, sync, and other product features are not implemented yet.
 
 ## Next Steps
 
