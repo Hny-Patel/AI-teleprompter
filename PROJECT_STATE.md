@@ -32,30 +32,43 @@ Claude and OpenAI are not part of this project.
 
 - `.github/copilot-instructions.md` — permanent workspace instructions
 - `PROJECT_STATE.md` — current product, technology, and project status
-- Application folders and source files have not been created yet.
+- `app/` — Next.js App Router, global styles, page, and layout
+- `components/` — responsive app shell, studio view, workspace navigation, theme controls, and shadcn/ui components
+- `features/` — location for future feature modules
+- `hooks/` — location for future shared React hooks
+- `lib/` — shared utilities, including the shadcn `cn` helper
+- `store/` — location for future application state
+- `public/` — static assets
 
 ## Decisions
 
-- Use the stack listed above; it is planned and has not been installed or scaffolded yet.
+- Use Next.js App Router, TypeScript, Tailwind CSS v4, shadcn/ui, Motion, Lucide icons, and Geist for the application shell.
+- Use the remaining planned stack as product features are implemented.
 - Use Google Gemini for AI features; do not use Claude or OpenAI.
 - Keep API keys out of source code. Store local secrets in `.env.local` and keep that file out of Git.
+- Use `light`, `dark`, and `oled` themes; the theme choice is stored by the theme provider.
+- Keep the Gemini key and model names in `.env.example`; the current shell does not require credentials.
 
 ## Done
 
 - Created the permanent workspace instructions.
 - Created this project-state document.
 - Initialized the Git repository.
-- Checked the build and lint commands; neither is available until a project manifest and scripts are added.
+- Scaffolded the Next.js App Router project with TypeScript and Tailwind CSS v4.
+- Set up shadcn/ui, Motion, Lucide icons, and the Geist font.
+- Added responsive desktop sidebar and iPhone-safe mobile tab navigation, reduced-motion-aware screen transitions, and light/dark/OLED themes.
+- Added `.env.example` and project run instructions.
+- Confirmed lint and production build checks pass.
+- Verified the production shell, mobile navigation, OLED theme selection, and screen transitions in a browser.
 
 ## Current Step
 
-Initial project setup is complete. No application features or scaffold have been created.
+Initial application foundation and responsive studio shell are in place. The teleprompter, editor, camera, AI, sync, and other product features are not implemented yet.
 
 ## Next Steps
 
-- Scaffold the Next.js App Router application with TypeScript.
-- Add and configure the planned dependencies and development scripts.
-- Implement features only as requested, one step at a time.
+- Build the script editor and teleprompter experience.
+- Add product features only as requested, one step at a time.
 
 ## Known Bugs
 
@@ -63,4 +76,4 @@ Initial project setup is complete. No application features or scaffold have been
 
 ## How To Run
 
-There is no runnable application yet because the project scaffold, dependencies, and package scripts have not been created. Once added, document the install, development, build, and lint commands here. Put local API keys in `.env.local`; never commit that file or place keys in source code.
+Install dependencies with `npm install`, then start the app with `npm run dev` and open [http://localhost:3000](http://localhost:3000). Run `npm run lint` and `npm run build` for checks. The app shell does not require API keys. For future Gemini features, copy `.env.example` to `.env.local` and fill in the private key; `.env.local` is ignored by Git.
